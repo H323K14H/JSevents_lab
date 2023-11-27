@@ -3,6 +3,7 @@ const toDoList = document.querySelector('#list');
 const input = document.querySelector('#new-todo');
 const remove = document.createElement('button');
 const todoForm = document.querySelector('#todo-form');
+const displayDate = document.querySelector('#date');
 
 enter.addEventListener("click", (event) => {
     event.preventDefault();
@@ -21,8 +22,9 @@ enter.addEventListener("click", (event) => {
     toDoList.appendChild(newItem);
 })
 
-
-
-
-
-
+displayDate.addEventListener("click", (event) => {
+    event.preventDefault();
+    const newDate = document.createElement('p');
+    newDate.innerText = Date();
+    displayDate.parentNode.appendChild(newDate);
+})
